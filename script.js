@@ -1,5 +1,4 @@
 //Declare global variables and datasources //
-
 var lowerCharacters = 'abcdefghijklmnopqrstuvwxyz';
 var upperCharacters = lowerCharacters.toUpperCase();
 var numbers = '0123456789';
@@ -66,42 +65,30 @@ function getUniversalCharString(){
   // Get lowercase options//
 if (lowerCasePref === true)
 universalCharacters = universalCharacters+lowerCharacters; 
-// console.log("lowercase " + lowerCasePref + " " + universalCharacters);
 
 // Get get upperCase char//
 if (upperCasePref === true)
 universalCharacters = universalCharacters+upperCharacters;
-// console.log("uppercase " + upperCasePref + " " + universalCharacters);
 
 // Get get numbers char//
 if (numbersPref === true)
 universalCharacters = universalCharacters+numbers;
-// console.log("numbers " + numbersPref + " " + universalCharacters);
 
 // Get get special char//
 if (specialPref === true)
 universalCharacters = universalCharacters+specialCharacters;
-// console.log("specials " + specialPref + " " + universalCharacters);
 return universalCharacters;
 
 }
 
 function generateRandomIndex(universalCharacters) {
-  // Return a value between 0 and maxValue
+  // Return a value between 0 and length of character string
   // Use: Math.floor() and Math.random()
-  // var maxValue = universalCharacters.length;
-    return (Math.floor(Math.random() * Math.floor(universalCharacters.length - 1)));
+     return (Math.floor(Math.random() * Math.floor(universalCharacters.length - 1)));
 }
 
-
+//Sets password to blank
 var password = ''
-// for-loop ... start 0, and you will end with passwordLength
-// Use a for-loop to pluck a character from universalCharacters using
-// the generateRandomIndex() for the position or index
-// index = generateRandomIndex();
-// universalCharacters.charAt(index)
-// password = password + universalCharacters.charAt(54);
-
 
 function generatePassword()
  {
@@ -122,6 +109,12 @@ function generatePassword()
   getUniversalCharString();
   generateRandomIndex(universalCharacters);
 
+  // Use a for-loop to pluck a character from universalCharacters using
+// the generateRandomIndex() for the position or index
+// index = generateRandomIndex();
+// universalCharacters.charAt(index)
+// password = password + universalCharacters.charAt(54);
+
   var i;
   for(i=0; i < passwordLength; i++){
     index = generateRandomIndex(universalCharacters);
@@ -140,10 +133,7 @@ function generatePassword()
   
  }
 
-//  //Copy password to clipboard
-// clipboard.addEventListener('click', () => {
-//   textarea = document.createElement('password');
-//   password = password.innerText;})
+
 
 
   

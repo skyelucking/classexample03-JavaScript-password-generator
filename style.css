@@ -29,7 +29,7 @@ header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
-  color: hsl(0, 0%, 3%);
+  color: hsl(253, 67%, 38%);
 }
 
 .card {
@@ -46,12 +46,14 @@ header {
   border: 4px dashed #050505;
 }
 
+
 .card-header::after {
   content: " ";
   display: block;
   width: 100%;
-  background: #070707;
+  background: #fcfafa;
   height: 2px;
+  font-size: 20px;
 }
 
 .card-body {
