@@ -139,5 +139,12 @@ function generatePassword()
   return password;
   
  }
+
+//  //Copy password to clipboard
+// clipboard.addEventListener('click', () => {
+//   textarea = document.createElement('password');
+//   password = password.innerText;})
+
+
   
 
